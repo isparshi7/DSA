@@ -1,0 +1,28 @@
+//to print number from 1 to n and the numbers should be even
+#include<iostream>
+using namespace std;
+void even(int n)
+{
+    if(n==0)
+    {
+        cout<<n;
+        return;
+    }
+    if(n%2==0)
+    {
+        cout<<n<<" ";
+        
+    }
+    even(n-1);
+    //or we can do instead of the above if condition
+    //cout<<n;
+    //even(n-2);
+}
+
+int main()
+{
+    int n=8;
+    even(n);
+    return 0;
+
+}

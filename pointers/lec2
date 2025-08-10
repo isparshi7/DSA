@@ -1,0 +1,81 @@
+#include<stdio.h>
+using namespace std;
+int main()
+{
+    int arr[5]={1,2,3,4,5};\
+    int *ptr=arr;
+    //print the address of first element
+    cout<<arr<<endl;
+    cout<<arr+0<<endl;
+    cout<<&arr[0]<<endl;
+    cout<<ptr<<endl;
+    //print the address of second element or 1 index
+   
+    cout<<arr+1<<endl;
+    cout<<&arr[1]<<endl;
+    // print the value
+    cout<<arr[0]<<endl;
+    cout<<*arr<<endl;
+    cout<<*(arr+0)<<endl;
+        cout<<*ptr<<endl;
+        //print saare address
+
+        for(int i=0;i<5;i++)
+        {
+            cout<<arr+i<<endl;
+        }
+
+        // to print all the values of array
+        for(int i=0;i<5;i++)
+        {
+            cout<<*(arr+i)<<endl;
+        }
+
+        //another way to print all the values of array
+        for(int i=0;i<5;i++)
+        {
+            cout<<*(ptr+i)<<endl;//or
+            cout<<ptr[i]<<endl;
+        }
+        //print the values of array like
+        for(int i=0;i<5;i++)
+        {
+            cout<<*ptr;
+            ptr++;
+        }
+
+        //print all the value
+        for(int i =0;i<5;i++)
+        {
+            cout<<ptr[i]<<" ";
+        }
+        //print all the address
+        for(int i =0;i<5;i++)
+        {
+            cout<<ptr+i<<endl;
+        }
+        //arithematic operation ptr++, ptr--, ptr=ptr+1
+          
+
+        for(int i=0;i<5;i++)
+        {
+            cout<<*ptr<<" ";     // to print all the values
+            ptr++;
+        }
+        //to execute ptr--
+        for(int i=5 ;i>0;i--)
+        {
+            cout<<*ptr<<" ";
+            ptr--;
+        }
+
+        //addition
+
+        ptr=ptr+3;
+        cout<<ptr<<endl;
+
+        //subtraction
+
+        ptr=ptr-2;
+        cout<<ptr<<endl;
+}

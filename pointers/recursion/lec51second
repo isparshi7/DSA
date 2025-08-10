@@ -1,0 +1,19 @@
+//print 5 to 1 numbers using recusion
+#include<iostream>
+using namespace std;
+void func(int n)
+{
+    if(n==1)
+    {
+        cout<<n;
+        return;
+    }
+    cout<<n<<" ";
+    func(n-1);
+}
+int main()
+{
+    int n=5;
+    func(n);
+    return 0;
+}

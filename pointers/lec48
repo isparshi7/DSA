@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n=10;
+    int *p=&n;//single pointer
+    int **p1=&p;//double pointer
+    int ***p2=&p1;//triple pointer
+    cout<<p<<" ";
+    cout<<p1<<" ";
+    cout<<p2<<" ";
+    //value ko modify krna ho jo n me rkhi h..
+    
+    *p=*p+5;//output 15
+    cout<<n;
+     
+
+}

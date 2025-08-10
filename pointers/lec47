@@ -1,0 +1,78 @@
+/*#include<iostream>
+using namespace std;
+void swapping(int *p1;int *p2)   // pass by pointer
+{
+    int temp=*p1;
+    *p1=*p2;
+    *p2=temp;
+}
+ int main()
+ {
+    int first=10;second=20;
+    swapping(first,second)
+    cout<<first<<" "<<second;
+ }*/
+   /*
+ //using pass by reference
+ include<iostream>
+ using namespace std;
+ void swapping(int &p1,int &p2)
+ {
+    int &temp=p1;
+    p1=p2;
+    p2=temp;
+
+ }
+int main()
+{
+    int first=10,second=20;
+    swapping(first,second);
+    cout<<first<<" "<< second;
+
+}
+*/
+
+
+
+
+
+/*
+void pass(vector<int>&temp)     //here temp is passed as a reference so temp and a is fully same  
+{
+for(int i=0;i<5;i++ )
+temp[i]=20; 
+}
+
+ int main()
+ {
+ vector<int>a(5,0);    //it means a has 5 things and all the data is 0
+ pass(a);
+ for(int i=0;i<5;i++)
+ cout<<a[i]<<" ";     
+  }
+*/
+
+
+
+
+/*
+void pass(int *p)
+{
+for(int i=0;i<5;i++)
+p[i]=p[i]*2;
+}
+int main()
+{
+int arr[]={1,2,3,4,5}
+pass(arr)
+for(int i=0;i<5;i++)
+cout<<p[i]<<" ";
+}
+*/
+
+
+
+/*
+conclusion is --- string, vector do reference help like &temp
+----------------- array,char arr do pointer help like *p
+*/

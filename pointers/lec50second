@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    //array which stores address of 2D array
+    int n,m,k;
+    cin>>n>>m>>k;
+    int ***ptr=new int **[n];
+    //creation of 2D array
+    for(int i=0;i<n;i++)
+    { 
+        ptr[i] = new int *[m];
+        for(int j=0;j<m;j++)
+        {
+            ptr[i][j]= new int [k];
+        }
+    }
+    //inserting values in array
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            for(int u=0;u<k;u++)
+            {
+                ptr[i][j][k]=i+j+u;
+            }
+        }
+    }
+    //printing these values
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            for(int u=0;u<k;u++)
+            {
+                cout<<ptr[i][j][u]<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    //deletion of memory
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            delete[] ptr[i][j];
+                }
+                delete[] ptr[i];
+    }
+    delete[] ptr;
+
+}
